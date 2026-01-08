@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
-const API_BASE = import.meta.env.REACT_APP_API_BASE;
+const API_BASE = import.meta.env.VITE_API_BASE;
 
 const MobilityCategory = ({ resident, setResidents }) => {
   const [entries, setEntries] = useState(() => {

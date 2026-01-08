@@ -20,6 +20,7 @@ import AddResidentDialog from "./AddResidentDialog";
 import ResidentProfileDialog from "./ResidentProfileDialog";
 import ResidentsFooter from "./ResidentsFooter";
 import { analyzeNote } from "../services/llmApi";
+const REACT_APP_API_BASE = import.meta.env.VITE_API_BASE;
 
 const ResidentsProfiles = () => {
   const [residents, setResidents] = useState([]);
@@ -48,7 +49,7 @@ const ResidentsProfiles = () => {
   // Load residents
   useEffect(() => {
     fetch(
-      "http://localhost:5000/api/staff"
+      `http://${REACT_APP_API_BASE}/api/staff`
     )
       .then((res) => res.json())
       .then((data) => {
