@@ -12,7 +12,7 @@ import {
   CircularProgress,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-const API_BASE = import.meta.env.API_BASE;
+const API_BASE = import.meta.env.REACT_APP_API_BASE;
 
 const AddResidentDialog = ({ open, onClose, setResidents }) => {
   const [newResident, setNewResident] = useState({
@@ -77,7 +77,7 @@ const AddResidentDialog = ({ open, onClose, setResidents }) => {
     try {
       setLoading(true);
       const res = await fetch(
-        "${API_BASE}/api/staff",
+        `${API_BASE}/api/staff`,
         {
           method: "POST",
           body: formData,

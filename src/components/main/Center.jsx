@@ -19,7 +19,7 @@ import ArticleIcon from "@mui/icons-material/Article";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import EditIcon from "@mui/icons-material/Edit";
 import { analyzeNote } from "../services/llmApi";
-const API_BASE = import.meta.env.API_BASE;
+const API_BASE = import.meta.env.REACT_APP_API_BASE;
 
 const Center = () => {
   const [setStaffList] = useState([]);
@@ -131,7 +131,7 @@ const Center = () => {
     setAdding(true);
     try {
       const res = await fetch(
-        "${API_BASE}/api/staff",
+        `${API_BASE}/api/staff`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

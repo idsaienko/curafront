@@ -11,7 +11,7 @@ import {
   Alert,
 } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
-const API_BASE = import.meta.env.API_BASE;
+const API_BASE = import.meta.env.REACT_APP_API_BASE;
 
 const roles = [
   { label: "Pflegekraft", value: "nurse" },
@@ -49,7 +49,7 @@ const Register = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        "${API_BASE}/api/auth/register",
+        `${API_BASE}/api/auth/register`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

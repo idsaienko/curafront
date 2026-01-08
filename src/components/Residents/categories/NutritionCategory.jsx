@@ -20,7 +20,7 @@ import LocalCafeIcon from "@mui/icons-material/LocalCafe";
 import LunchDiningIcon from "@mui/icons-material/LunchDining";
 import AppleIcon from "@mui/icons-material/Apple";
 import WineBarIcon from "@mui/icons-material/WineBar";
-const API_BASE = import.meta.env.API_BASE;
+const API_BASE = import.meta.env.REACT_APP_API_BASE;
 
 const NutritionCategory = ({ resident, setResidents }) => {
   const [entries, setEntries] = useState(() => {

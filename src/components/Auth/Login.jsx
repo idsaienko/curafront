@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import Curalogo from "./assets/10d51647-7fe0-410a-a7b3-21caa144a4a8.png";
-const API_BASE = import.meta.env.API_BASE;
+const API_BASE = import.meta.env.REACT_APP_API_BASE;
 
 const Login = () => {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -38,7 +38,7 @@ const Login = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        "${API_BASE}/api/auth/login",
+        `${API_BASE}/api/auth/login`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

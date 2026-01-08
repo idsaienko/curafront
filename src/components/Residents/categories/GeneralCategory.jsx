@@ -19,7 +19,7 @@ import AddIcon from "@mui/icons-material/Add";
 import CloseIcon from "@mui/icons-material/Close";
 import CheckIcon from "@mui/icons-material/Check";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-const API_BASE = import.meta.env.API_BASE;
+const API_BASE = import.meta.env.REACT_APP_API_BASE;
 
 const GeneralCategory = ({ resident = {}, setResidents }) => {
   const [openForm, setOpenForm] = useState(false);

@@ -24,7 +24,7 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-const API_BASE = import.meta.env.API_BASE;
+const API_BASE = import.meta.env.REACT_APP_API_BASE;
 
 const PainChart = ({ resident, setResidents, aiEntry }) => {
   const [painEntries, setPainEntries] = useState(() => {
