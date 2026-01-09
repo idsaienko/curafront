@@ -14,10 +14,10 @@ import { Link, useNavigate } from "react-router-dom";
 const API_BASE = import.meta.env.VITE_API_BASE;
 
 const roles = [
-  { label: "Pflegekraft", value: "nurse" },
-  { label: "Arzt", value: "doctor" },
-  { label: "Administrator", value: "admin" },
-  { label: "Andere", value: "others" },
+  { label: "Pflegekraft", value: "Pflegekraft" },
+  { label: "Arzt", value: "Arzt" },
+  { label: "Administrator", value: "Administrator" },
+  { label: "Andere", value: "Andere" },
 ];
 
 const Register = () => {
