@@ -1,7 +1,7 @@
-const API_BASE = "http://curaexample-production.up.railway.app/api/llm";
+const API_BASE = import.meta.env.VITE_API_BASE;
 
 export async function analyzeNote(note, residentId) {
-  const res = await fetch(`${API_BASE}/analyze`, {
+  const res = await fetch(`${API_BASE}/api/llm/analyze`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
